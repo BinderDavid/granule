@@ -8,7 +8,7 @@
 -- combinator over queues to make complex function definitions easier.  --
 --------------------------------------------------------------------------
 
-module Language.Granule.Queue where
+module Repl.Queue where
 
 data Queue a = Queue [a] [a]
 

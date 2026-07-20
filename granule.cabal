@@ -325,27 +325,6 @@ executable grls
     , lsp ==2.7.0.1
     , split
 
-executable grepl
-  import: granule-default-lang
-  import: granule-dependencies
-  import: granule-ghc-warnings
-  main-is: Language/Granule/Main.hs
-  other-modules:
-      Language.Granule.Queue
-      Language.Granule.ReplError
-      Language.Granule.ReplParser
-      Paths_granule
-  autogen-modules:
-      Paths_granule
-  hs-source-dirs:
-      repl/app
-  build-depends:
-    , filemanip           ==0.3.6.3
-    , granule:frontend
-    , granule:interpreter 
-    , haskeline           ==0.8.2
-    , parsec              ==3.1.16.1
-
 executable grc
   import: granule-default-lang
   import: granule-dependencies
@@ -385,3 +364,27 @@ executable grenchmark
     , granule:interpreter
     , process
     , strict
+
+executable grx
+  import: granule-default-lang
+  import: granule-dependencies
+  import: granule-ghc-warnings
+  hs-source-dirs:
+      app/grx
+  main-is: Main.hs
+  other-modules:
+      Repl.Queue
+      Repl.ReplError
+      Repl.ReplParser
+      Repl.Main
+      Paths_granule
+  autogen-modules:
+      Paths_granule
+  
+  build-depends:
+    , filemanip           ==0.3.6.3
+    , granule:frontend
+    , granule:interpreter 
+    , haskeline           ==0.8.2
+    , parsec              ==3.1.16.1
+  

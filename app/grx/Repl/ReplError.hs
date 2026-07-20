@@ -1,7 +1,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE ImplicitParams #-}
 
-module Language.Granule.ReplError where
+module Repl.ReplError where
 
 import Control.Monad.Except()
 import Control.Exception (SomeException)

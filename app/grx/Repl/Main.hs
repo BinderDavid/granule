@@ -5,7 +5,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE PackageImports #-}
 
-module Main where
+module Repl.Main where
 
 import System.Exit (die)
 import System.FilePath
@@ -39,8 +39,8 @@ import Language.Granule.Checker.TypeAliases
 import Language.Granule.Interpreter.Eval
 import qualified Language.Granule.Interpreter as Interpreter
 
-import Language.Granule.ReplError
-import Language.Granule.ReplParser
+import Repl.ReplError
+import Repl.ReplParser
 
 import Data.Version (showVersion)
 import Data.Functor((<&>))

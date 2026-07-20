@@ -1,6 +1,6 @@
 {-# LANGUAGE NoMonomorphismRestriction #-}
 {-# LANGUAGE FlexibleContexts #-}
-module Language.Granule.ReplParser where
+module Repl.ReplParser where
 
 import Prelude
 import qualified Data.Text as T
