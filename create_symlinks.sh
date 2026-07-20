@@ -9,4 +9,5 @@ INSTALL_DIR=$(cabal path --installdir)
 # Create symlinks
 ln --symbolic --force $GRX $INSTALL_DIR/grepl
 ln --symbolic --force $GRX $INSTALL_DIR/grls
+ln --symbolic --force $GRX $INSTALL_DIR/gr
 

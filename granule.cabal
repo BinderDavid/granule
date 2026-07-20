@@ -283,31 +283,6 @@ test-suite gr-golden
 --
 --
 
-executable gr
-  import: granule-default-lang
-  import: granule-dependencies
-  import: granule-ghc-warnings
-  main-is: Main.hs
-  other-modules:
-      Language.Granule.Doc
-      Language.Granule.Interpreter.Desugar
-      Language.Granule.Interpreter.Eval
-      Language.Granule.Interpreter
-      Paths_granule
-  autogen-modules:
-      Paths_granule
-  hs-source-dirs:
-      interpreter/src
-  build-depends:
-    , concurrent-extra
-    , extra
-    , gitrev
-    , granule:frontend
-    , granule:interpreter
-    , granule:runtime
-    , logict >=0.7.1.0
-    , optparse-applicative >=0.18.0.0
-
 executable grc
   import: granule-default-lang
   import: granule-dependencies
@@ -358,6 +333,7 @@ executable grx
   other-modules:
       LSP.Main
       LSP.Server
+      Interpreter.Main
       Repl.Queue
       Repl.ReplError
       Repl.ReplParser
@@ -367,15 +343,25 @@ executable grx
       Paths_granule
   
   build-depends:
+    , concurrent-extra
     , data-default
+    , extra
     , filemanip           ==0.3.6.3
+    , gitrev
     , granule:frontend
     , granule:interpreter 
     , haskeline           ==0.8.2
     , lens
+    , logict >=0.7.1.0
     , lsp                 ==2.7.0.1
+    , optparse-applicative >=0.18.0.0
     , parsec              ==3.1.16.1
     , split
+
+    
+
+
+
 
  
 

@@ -1,4 +1,4 @@
-module Main where
+module Interpreter.Main where
 
 import qualified Language.Granule.Interpreter as I
 
