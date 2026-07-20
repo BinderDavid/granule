@@ -6,7 +6,7 @@
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TypeOperators #-}
 
-module Language.Granule.Server where
+module LSP.Server where
 
 import Control.Concurrent.MVar (MVar, newMVar, readMVar, modifyMVar)
 import Control.Exception (try, SomeException)

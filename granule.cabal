@@ -308,23 +308,6 @@ executable gr
     , logict >=0.7.1.0
     , optparse-applicative >=0.18.0.0
 
-executable grls
-  import: granule-default-lang
-  import: granule-dependencies
-  import: granule-ghc-warnings
-  main-is: Main.hs
-  other-modules:
-       Language.Granule.Server
-  hs-source-dirs:
-      server/app
-  build-depends:
-    , data-default
-    , granule:frontend
-    , granule:interpreter
-    , lens
-    , lsp ==2.7.0.1
-    , split
-
 executable grc
   import: granule-default-lang
   import: granule-dependencies
@@ -373,6 +356,8 @@ executable grx
       app/grx
   main-is: Main.hs
   other-modules:
+      LSP.Main
+      LSP.Server
       Repl.Queue
       Repl.ReplError
       Repl.ReplParser
@@ -382,9 +367,18 @@ executable grx
       Paths_granule
   
   build-depends:
+    , data-default
     , filemanip           ==0.3.6.3
     , granule:frontend
     , granule:interpreter 
     , haskeline           ==0.8.2
+    , lens
+    , lsp                 ==2.7.0.1
     , parsec              ==3.1.16.1
+    , split
+
+ 
+
+
+
   
