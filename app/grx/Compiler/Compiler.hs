@@ -3,7 +3,7 @@
 {-# LANGUAGE PackageImports #-}
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE NamedFieldPuns #-}
-module Language.Granule.Compiler where
+module Compiler.Compiler where
 
 import Control.Exception (SomeException, displayException, try)
 import Control.Monad ((<=<), forM_, when)
